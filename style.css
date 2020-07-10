@@ -3,24 +3,22 @@ body {
 	height: 100%;
   	width: 100%;
 	overflow: hidden;
-	display: flex;
 }
 
 h1 {
 	font-family: 'Pacifico', cursive;
 	font-size: 3rem;
+	text-align: center;
 	color: #555573;
 }
 
 .teapot {
-	flex-wrap: wrap;
 	display: flex;
 	justify-content: center;
-	margin: 250px -100px;
+	align-items: center;
 }
 
-.lid,
-.spout {
+.lid, .spout {
 	background-color: #EA5FAB;
 }
 
@@ -61,27 +59,29 @@ h1 {
 }
 
 .drip {
-  position: relative;
+	position: relative;
+    top: 50%;
+    left: 110%;
+    transform: translate(-50%, -50%);
 	width: 20px;
 	height: 20px;
-  top: -30px;
-  margin: 399px 1px;
+	top: -30px;
 	background: #FFF;
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
-  -moz-animation-name: drip;
-  -webkit-animation-name: drip;
-  animation-name: drip;
-  -moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
-  -webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
-  animation-timing-function: cubic-bezier(1,0,.91,.19);
-  -moz-animation-duration: 2s;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+	-moz-animation-name: drip;
+	-webkit-animation-name: drip;
+	animation-name: drip;
+	-moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
+	-webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
+	animation-timing-function: cubic-bezier(1,0,.91,.19);
+	-moz-animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
 }
 
 .drip:before {
